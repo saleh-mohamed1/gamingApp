@@ -4,21 +4,16 @@ import { Ui } from "./ui.module.js";
 export class Details{
     constructor(id){
         this.uiDetails = new Ui(); 
-                
         document.getElementById("closePage").addEventListener("click" , () => {
-        document.querySelector(".hide").classList.remove("d-none");
-        document.querySelector("#secondeDataSet").classList.add("d-none");
+            document.querySelector("#secondeDataSet").classList.add("d-none");
+            document.querySelector(".hide").classList.remove("d-none");
         });
-              
-            
         this.detailsOfGaming(id);
-
     };
     
-    
     async detailsOfGaming(idGame) {
-        let loadPage = document.getElementById('loadPage');
-        loadPage.classList.remove('d-none');
+        let loadPages = document.getElementById('loadPages');
+        loadPages.classList.remove('d-none');
     const options = {
         method: 'GET',
         headers: {
@@ -28,10 +23,10 @@ export class Details{
     };
     let responseDetails = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${idGame}` , options);
     let finallys =        await  responseDetails.json();
-    loadPage.classList.add('d-none');
-    this.uiDetails.displayDetails(finallys);
-    
 
+    loadPages.classList.add('d-none');
+    
+    this.uiDetails.displayDetails(finallys);
     };
 
     

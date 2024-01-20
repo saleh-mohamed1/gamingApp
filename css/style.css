@@ -79,9 +79,16 @@ body{
 #closePage{
     cursor: pointer;
 }
-
 #loadPage{
     font-size: 80px !important;
     right: 48% !important;
 }
-  
+#loadPages{
+    background-color: var(--main-color) !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    font-size: 80px !important;
+    right: 48% !important;
+}

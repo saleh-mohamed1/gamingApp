@@ -15,7 +15,6 @@ export class AllGames{
     };
     async  getApi(get) {
         let loadPage = document.getElementById('loadPage');
-
         loadPage.classList.remove('d-none')
         document.querySelector("#loadDetails").classList.add('d-none')
     const options = {
